@@ -19,14 +19,19 @@ export const RecipeDetails = () => {
                         <img src={image} alt="image" className="self-start"/>
                         <div>
                             <h3><span className="font-bold">Cuisine</span> : {cuisineType}</h3>
-                            <h3><span className="font-bold">Ingredients</span> : {ingredients.join(" ")}</h3>
+                            <h3><span className="font-bold">Ingredients</span> : {ingredients}</h3>
                             <h3><span className="font-bold">Instructions</span></h3>
+                          
+                            {Array.isArray({ingredients})?
                             <ol>
                                 {
-                                    instructions.map((inst) =>
+                                    
+                                    instructions?.map((inst) =>
                                      <li>{inst}</li>)
+                                     
                                 }
                             </ol>
+                       : <>{ingredients}</> }
                         </div>
                       </div>
                     </div>
