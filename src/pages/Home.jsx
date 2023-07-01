@@ -1,8 +1,13 @@
+import { useData } from "../context/DataContext"
+import { Search } from "../components/Search"
+import { RecipeCard } from "../components/RecipeCard"
 
 export const Home = () => {
+    
     return(
-        <>
-        <h3 className="bg-red-600">Home</h3>
-        </>
+        <div className="flex flex-col gap-5 p-4">
+        <Search />
+        <RecipeCard/>
+        </div>
     )
 }
