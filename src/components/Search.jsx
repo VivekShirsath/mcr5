@@ -10,7 +10,7 @@ export const Search = () => {
 
 
     return(
-        <div className="p-3">
+        <div className="p-3 flex gap-3 shadow-md">
             <input type="text" placeholder="Enter items" value={query} 
             onInput = {(e) => handle(e)} />
             

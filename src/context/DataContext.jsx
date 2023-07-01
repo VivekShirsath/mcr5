@@ -23,10 +23,10 @@ export const DataProvider = ({children}) => {
         const storage = JSON?.parse(localStorage?.getItem('details'));
         console.log(storage)
         storage=== null ?
-        setRecipe([...recipeData]) : setRecipe([...recipeData,JSON?.parse(localStorage?.getItem('details'))?.recipe])
+        setRecipe([...recipeData]) : setRecipe(JSON?.parse(localStorage?.getItem('details'))?.recipe)
         setLoading(false);
     }
-   console.log(recipe)
+   console.log(recipe);
     return(
         <DataContext.Provider value={{recipe,setRecipe,loading,filter,setFilter,query,setquery}}>
             {children}
